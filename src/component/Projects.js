@@ -33,7 +33,7 @@ export default class Projects extends Component {
               <h4 className="mt-2">Friendly Chat Application</h4>
             </div>
             <div className="row col-10 mb-5 mx-auto">
-              <div className="col-8 text-font mt-4">
+              <div className="col-10 col-md-8 text-font mt-4">
                 <b>Friendly Chat An Android application using firebase to help
                 people connect and chat by sending messages and images with
                 Google secure login options.</b>
@@ -62,7 +62,7 @@ export default class Projects extends Component {
                   <span className="rounded bg-dark font-size2 text-light px-2 py-1 me-1">Download Link</span>
                 </div>
               </div>
-              <div className="col-4 img-border">
+              <div className="col-11 col-md-4 img-border">
                 <marquee >
                   <img src={F1} width="160px" height="340px" className="me-1 img-border"/>
                   <img src={F2} width="160px" height="340px" className="me-1 img-border"/>
@@ -79,7 +79,7 @@ export default class Projects extends Component {
               <h4 className="mt-2">Find My Session</h4>
             </div>
             <div className="row col-10 mb-5 mx-auto">
-              <div className="col-8 text-font mt-3">
+              <div className="col-11 col-md-8 text-font mt-3">
                 <b>Find My Session helps find cowid-19 vaccine session, 
                 you can find where and how many doses available in that center, 
                 can find address of that center.</b>
@@ -109,7 +109,7 @@ export default class Projects extends Component {
                 </div>
 
               </div>
-              <div className="col-4 img-border">
+              <div className="col-11 col-md-4 img-border">
                 <marquee>
                   <img src={C1} width="160px" height="340px" className="me-1 img-border"/>
                   <img src={C2} width="160px" height="340px" className="me-1 img-border"/>
@@ -124,8 +124,8 @@ export default class Projects extends Component {
             <div className="text-center m-3">
               <h4 className="mt-3">UniInfo</h4>
             </div>
-            <div className="row col-10 mb-5 mx-auto">
-              <div className="col-8 text-font mt-3">
+            <div className="row col-11 mb-5 mx-auto">
+              <div className="col-10 col-md-8 text-font mt-3">
                 <b>UniInfo application help to find University all over the world just 
                 enter country name you get all university list and click that university 
                 name you can university details and also you can visit university website
@@ -156,7 +156,7 @@ export default class Projects extends Component {
                 </div>
 
               </div>
-              <div className="col-4 img-border">
+              <div className="col-11 col-md-4 img-border">
                 <marquee>
                   <img src={U1} width="160px" height="340px" className="me-1 img-border"/>
                   <img src={U2} width="160px" height="340px" className="me-1 img-border"/>
