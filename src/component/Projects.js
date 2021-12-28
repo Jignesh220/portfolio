@@ -62,7 +62,7 @@ export default class Projects extends Component {
                   <span className="rounded bg-dark font-size2 text-light px-2 py-1 me-1">Download Link</span>
                 </div>
               </div>
-              <div className="col-11 col-md-4 img-border">
+              <div className="col-11 col-md-4 img-border mt-3">
                 <marquee >
                   <img src={F1} width="160px" height="340px" className="me-1 img-border"/>
                   <img src={F2} width="160px" height="340px" className="me-1 img-border"/>
@@ -109,7 +109,7 @@ export default class Projects extends Component {
                 </div>
 
               </div>
-              <div className="col-11 col-md-4 img-border">
+              <div className="col-11 col-md-4 img-border mt-3">
                 <marquee>
                   <img src={C1} width="160px" height="340px" className="me-1 img-border"/>
                   <img src={C2} width="160px" height="340px" className="me-1 img-border"/>
@@ -156,7 +156,7 @@ export default class Projects extends Component {
                 </div>
 
               </div>
-              <div className="col-11 col-md-4 img-border">
+              <div className="col-11 col-md-4 img-border mt-3">
                 <marquee>
                   <img src={U1} width="160px" height="340px" className="me-1 img-border"/>
                   <img src={U2} width="160px" height="340px" className="me-1 img-border"/>
