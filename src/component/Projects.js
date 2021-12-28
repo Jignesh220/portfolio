@@ -33,7 +33,7 @@ export default class Projects extends Component {
               <h4 className="mt-2">Friendly Chat Application</h4>
             </div>
             <div className="row col-10 mb-5 mx-auto">
-              <div className="col-10 col-md-8 text-font mt-4">
+              <div className="col-10 col-md-8 text-font mt-4 mx-auto">
                 <b>Friendly Chat An Android application using firebase to help
                 people connect and chat by sending messages and images with
                 Google secure login options.</b>
@@ -79,7 +79,7 @@ export default class Projects extends Component {
               <h4 className="mt-2">Find My Session</h4>
             </div>
             <div className="row col-10 mb-5 mx-auto">
-              <div className="col-11 col-md-8 text-font mt-3">
+              <div className="col-11 col-md-8 text-font mt-3 mx-auto">
                 <b>Find My Session helps find cowid-19 vaccine session, 
                 you can find where and how many doses available in that center, 
                 can find address of that center.</b>
@@ -125,7 +125,7 @@ export default class Projects extends Component {
               <h4 className="mt-3">UniInfo</h4>
             </div>
             <div className="row col-11 mb-5 mx-auto">
-              <div className="col-10 col-md-8 text-font mt-3">
+              <div className="col-10 col-md-8 text-font mt-3 mx-auto">
                 <b>UniInfo application help to find University all over the world just 
                 enter country name you get all university list and click that university 
                 name you can university details and also you can visit university website
