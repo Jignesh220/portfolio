@@ -37,7 +37,7 @@ export default function Intro() {
                     <i alt="GitHub logo" class="bi bi-github" />
                   </a>
                 </div>
-                <a className="btn col-10 col-md-6 mx-auto button-rounded p-1 py-2 mt-4 border-0 zoom1 text-light shadow-lg">
+                <a className="btn col-10 col-md-6 mx-auto button-rounded p-1 py-2 mt-4 border-0 zoom1 text-light shadow-lg" href="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/JigneshBaria_Resume_simform.pdf?alt=media&token=0129c50b-dc74-46a9-befe-345921e6c962">
                   Resume
                 </a>
                 <br />
