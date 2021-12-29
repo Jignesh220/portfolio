@@ -348,6 +348,14 @@ export const University = () => {
                   className="me-1 img-border"
                 />
               </Carousel.Item>
+              <Carousel.Item interval={800}>
+                <img
+                  src={U6}
+                  width="160px"
+                  height="340px"
+                  className="me-1 img-border"
+                />
+              </Carousel.Item>
             </Carousel>
           </center>
         </div>
