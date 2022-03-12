@@ -363,7 +363,7 @@ export const University = () => {
     </div>
   );
 };
-export const University = () => {
+export const VendurMart = () => {
   return (
     <div>
       <div className="text-center m-3">
