@@ -429,32 +429,32 @@ export const VendurMart = () => {
               <Carousel.Item interval={800}>
                 <img
                   src={"https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/screencapture-vendur-mart-web-app-2022-03-09-14_37_34.png?alt=media&token=3f723dfc-f976-458c-a8c5-adf469bb3b4d"}
-                  width="160px"
-                  height="340px"
+                  width="350px"
+                  height="200px"
                   className="me-1 img-border"
                 />
               </Carousel.Item>
               <Carousel.Item interval={800}>
                 <img
                   src={"https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/screencapture-vendur-mart-web-app-home-2022-03-09-14_38_59.png?alt=media&token=a0939965-3522-4366-abe3-f88e29742b45"}
-                  width="160px"
-                  height="340px"
+                  width="350px"
+                  height="200px"
                   className="me-1 img-border"
                 />
               </Carousel.Item>
               <Carousel.Item interval={800}>
                 <img
                   src={"https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/screencapture-vendur-mart-web-app-home-2022-03-09-14_43_59.png?alt=media&token=4821fdfd-3dbb-49a8-b896-ced2c4893217"}
-                  width="160px"
-                  height="340px"
+                  width="350px"
+                  height="200px"
                   className="me-1 img-border"
                 />
               </Carousel.Item>
               <Carousel.Item interval={800}>
                 <img
                   src={"https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/screencapture-vendur-mart-web-app-grocery-2022-03-09-14_45_17.png?alt=media&token=fa056f96-e878-4265-bea0-04fb7b8ae7e3"}
-                  width="160px"
-                  height="340px"
+                  width="350px"
+                  height="200px"
                   className="me-1 img-border"
                 />
               </Carousel.Item>
