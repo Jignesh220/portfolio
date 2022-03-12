@@ -363,3 +363,105 @@ export const University = () => {
     </div>
   );
 };
+export const University = () => {
+  return (
+    <div>
+      <div className="text-center m-3">
+        <h4 className="mt-3">UniInfo</h4>
+      </div>
+      <div className="row col-10 mb-5 mx-auto">
+        <div className="col-11 col-md-8 text-font mt-3 mx-auto">
+          <b>
+          VendurMart is an E-commerce platform where you can list your business and 
+          connect with businesses worldwide and grow together. It supports small, 
+          medium and large businesses. Through VendurMart one gets buy leads which 
+          helps users to contact any other vendur and turn it into a business deal.
+          Users can also shop from the listed products.
+          </b>
+
+          <div className="mt-3">
+            Tech Involved:
+            <span className="rounded bTheme font-size1 text-light px-2 py-1 me-1 ms-2">
+              ReactJS
+            </span>
+            <span className="rounded bTheme font-size1 text-light px-2 py-1 me-1">
+              Gatsby
+            </span>
+            <span className="rounded bTheme font-size1 text-light px-2 py-1 me-1">
+              Javascript
+            </span>
+            <span className="rounded bTheme font-size1 text-light px-2 py-1 me-1">
+              Bootstrap
+            </span>
+            <span className="rounded bTheme font-size1 text-light px-2 py-1 me-1">
+              API
+            </span>
+            <span className="rounded bTheme font-size1 text-light px-2 py-1 me-1">
+              Firebase
+            </span>
+          </div>
+
+          <div className="mt-5 ms-5">
+            <a
+              className="btn px-4 bTheme text-light"
+              href="https://github.com/Jignesh220/vendur_mart"
+            >
+              GitHub
+            </a>
+            <br />
+            <span className="rounded bg-dark font-size2 text-light px-2 py-1 me-1">
+              source code
+            </span>
+          </div>
+
+          <div className="mt-5 ms-5">
+            <a
+              className="btn px-4 bTheme text-light"
+              href="https://vendur-mart.web.app/"
+            >
+              Live Website
+            </a>
+          </div>
+        </div>
+        <div className="col-11 col-md-4 img-border mt-3">
+          <center>
+            <Carousel className="">
+              <Carousel.Item interval={800}>
+                <img
+                  src={"https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/screencapture-vendur-mart-web-app-2022-03-09-14_37_34.png?alt=media&token=3f723dfc-f976-458c-a8c5-adf469bb3b4d"}
+                  width="160px"
+                  height="340px"
+                  className="me-1 img-border"
+                />
+              </Carousel.Item>
+              <Carousel.Item interval={800}>
+                <img
+                  src={"https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/screencapture-vendur-mart-web-app-home-2022-03-09-14_38_59.png?alt=media&token=a0939965-3522-4366-abe3-f88e29742b45"}
+                  width="160px"
+                  height="340px"
+                  className="me-1 img-border"
+                />
+              </Carousel.Item>
+              <Carousel.Item interval={800}>
+                <img
+                  src={"https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/screencapture-vendur-mart-web-app-home-2022-03-09-14_43_59.png?alt=media&token=4821fdfd-3dbb-49a8-b896-ced2c4893217"}
+                  width="160px"
+                  height="340px"
+                  className="me-1 img-border"
+                />
+              </Carousel.Item>
+              <Carousel.Item interval={800}>
+                <img
+                  src={"https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/screencapture-vendur-mart-web-app-grocery-2022-03-09-14_45_17.png?alt=media&token=fa056f96-e878-4265-bea0-04fb7b8ae7e3"}
+                  width="160px"
+                  height="340px"
+                  className="me-1 img-border"
+                />
+              </Carousel.Item>
+            </Carousel>
+          </center>
+        </div>
+      </div>
+    </div>
+  );
+};
