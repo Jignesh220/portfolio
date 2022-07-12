@@ -8,7 +8,7 @@ export default function Intro() {
         <div className="card-body bg-theme border-rounded shadow-lg">
           <div className="row row-cols-3 row-cols-md-4">
             <div className="col-md-4 col-12 border-rounded d-flex align-items-center no-gutters">
-              <img src={Profile} alt="" className="mx-auto" height="310px" />
+              <img src={"https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/myphoto.png?alt=media&token=d1e3c456-be18-4a0a-817f-dd186d525ac0"} alt="" className="mx-auto" height="310px" />
             </div>
             <div className="col-md-8 col-lg-8 col-12 border-rounded mx-auto text-dark text-center">
               <div className="mt-4">
@@ -40,7 +40,7 @@ export default function Intro() {
                 <a
                   className="btn col-10 col-md-6 mx-auto button-rounded p-1 py-2 mt-4 border-0 zoom1 text-light shadow-lg"
                   target="_blank"
-                  href="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/res.pdf?alt=media&token=0926d07f-ae9a-421a-a7b1-486aea3e89c0"
+                  href="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/JigneshBaria_Resume.pdf?alt=media&token=b5364e57-887f-46d9-bebf-ba8405b09bb4"
                 >
                   Resume
                 </a>
