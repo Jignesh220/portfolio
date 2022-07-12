@@ -62,7 +62,7 @@ export default function Intro() {
                 <a
                   className="btn col-10 col-md-6 mx-auto button-rounded p-1 py-2 mt-4 border-0 zoom1 text-light shadow-lg"
                   target="_blank"
-                  href="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/JigneshBaria_Resume.pdf?alt=media&token=b5364e57-887f-46d9-bebf-ba8405b09bb4"
+                  href="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/JigneshBaria_Resume.pdf?alt=media&token=0fdedd4b-0463-4bc4-954e-859194d2271f"
                 >
                   Resume
                 </a>
