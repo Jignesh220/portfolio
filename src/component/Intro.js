@@ -17,22 +17,22 @@ export default function Intro() {
                 <div className="card-text mt-3">Comapted computer science and engineering (B.Tech) Degree from Parul University with 7.4 CGPA</div>
                 <div className="mt-3">
                   Skills:
-                  <span className="rounded bck font-size1 text-light px-2 py-1 me-1 ms-2">
+                  <span className="rounded bck font-size1 text-dark px-2 py-1 me-1 ms-2">
                     ReactJS
                   </span>
-                  <span className="rounded bck font-size1 text-light px-2 py-1 me-1">
+                  <span className="rounded bck font-size1 text-dark px-2 py-1 me-1">
                     Javascript
                   </span>
-                  <span className="rounded bck font-size1 text-light px-2 py-1 me-1">
+                  <span className="rounded bck font-size1 text-dark px-2 py-1 me-1">
                     Web-development
                   </span>
-                  <span className="rounded bck font-size1 text-light px-2 py-1 me-1">
+                  <span className="rounded bck font-size1 text-dark px-2 py-1 me-1">
                     Firebase
                   </span>
-                  <span className="rounded bck font-size1 text-light px-2 py-1 me-1">
+                  <span className="rounded bck font-size1 text-dark px-2 py-1 me-1">
                     Firestore
                   </span>
-                  <span className="rounded bck font-size1 text-light px-2 py-1 me-1">
+                  <span className="rounded bck font-size1 text-dark px-2 py-1 me-1">
                     Java
                   </span>
                 </div>
