@@ -8,12 +8,35 @@ export default function Intro() {
         <div className="card-body bg-theme border-rounded shadow-lg">
           <div className="row row-cols-3 row-cols-md-4">
             <div className="col-md-4 col-12 border-rounded d-flex align-items-center no-gutters">
-              <img src={"https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/myphoto.png?alt=media&token=d1e3c456-be18-4a0a-817f-dd186d525ac0"} alt="" className="mx-auto" height="310px" />
+              <img src={Profile} alt="" className="mx-auto" height="310px" />
             </div>
             <div className="col-md-8 col-lg-8 col-12 border-rounded mx-auto text-dark text-center">
               <div className="mt-4">
                 <h3 className="card-title">Jignesh Baria</h3>
-                <div className="card-text">Software Developer</div>
+                <div className="card-text">Comp</div>
+                <div className="card-text mt-3">Comapted computer science and engineering (B.Tech) Degree from Parul University with 7.4 CGPA</div>
+                <div className="mt-3">
+                  Skills:
+                  <span className="rounded bTheme font-size1 text-light px-2 py-1 me-1 ms-2">
+                    ReactJS
+                  </span>
+                  <span className="rounded bTheme font-size1 text-light px-2 py-1 me-1">
+                    Javascript
+                  </span>
+                  <span className="rounded bTheme font-size1 text-light px-2 py-1 me-1">
+                    Web-development
+                  </span>
+                  <span className="rounded bTheme font-size1 text-light px-2 py-1 me-1">
+                    Firebase
+                  </span>
+                  <span className="rounded bTheme font-size1 text-light px-2 py-1 me-1">
+                    Firestore
+                  </span>
+                  <span className="rounded bTheme font-size1 text-light px-2 py-1 me-1">
+                    Java
+                  </span>
+                </div>
+
                 <div className="mx-auto mt-3">
                   <a
                     className="navbar-brand text-danger zoom1"
