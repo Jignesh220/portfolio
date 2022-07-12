@@ -13,26 +13,25 @@ export default function Intro() {
             <div className="col-md-8 col-lg-8 col-12 border-rounded mx-auto text-dark text-center">
               <div className="mt-4">
                 <h3 className="card-title">Jignesh Baria</h3>
-                <div className="card-text">Comp</div>
-                <div className="card-text mt-3">Comapted computer science and engineering (B.Tech) Degree from Parul University with 7.4 CGPA</div>
+                <div className="card-text mt-3">Comapted<b>Computer Science and Engineering (B.Tech)</b>  Degree from Parul University with <b>7.4 CGPA</b></div>
                 <div className="mt-3">
                   Skills:
-                  <span className="rounded bck font-size1 text-dark px-2 py-1 me-1 ms-2">
+                  <span className="rounded bck font-size1 b text-dark px-2 py-1 me-1 ms-2">
                     ReactJS
                   </span>
-                  <span className="rounded bck font-size1 text-dark px-2 py-1 me-1">
+                  <span className="rounded bck font-size1 b text-dark px-2 py-1 me-1">
                     Javascript
                   </span>
-                  <span className="rounded bck font-size1 text-dark px-2 py-1 me-1">
+                  <span className="rounded bck font-size1 b text-dark px-2 py-1 me-1">
                     Web-development
                   </span>
-                  <span className="rounded bck font-size1 text-dark px-2 py-1 me-1">
+                  <span className="rounded bck font-size1 b text-dark px-2 py-1 me-1">
                     Firebase
                   </span>
-                  <span className="rounded bck font-size1 text-dark px-2 py-1 me-1">
+                  <span className="rounded bck font-size1 b text-dark px-2 py-1 me-1">
                     Firestore
                   </span>
-                  <span className="rounded bck font-size1 text-dark px-2 py-1 me-1">
+                  <span className="rounded bck font-size1 b text-dark px-2 py-1 me-1">
                     Java
                   </span>
                 </div>
