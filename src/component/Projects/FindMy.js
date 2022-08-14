@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "gatsby";
-import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -12,9 +11,17 @@ import { styled } from "@mui/material/styles";
 import Dialog from "@mui/material/Dialog";
 import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
-import DialogActions from "@mui/material/DialogActions";
 import CloseIcon from "@mui/icons-material/Close";
 import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+
+import MobileStepper from '@mui/material/MobileStepper';
+import Paper from '@mui/material/Paper';
+import SwipeableViews from 'react-swipeable-views';
+import { autoPlay } from 'react-swipeable-views-utils';
+import { useTheme } from '@mui/material/styles';
+
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
@@ -62,6 +69,21 @@ export default function FindMy() {
   };
   const handleClose = () => {
     setOpen(false);
+  };
+  const theme = useTheme();
+  const [activeStep, setActiveStep] = React.useState(0);
+  const maxSteps = images.length;
+
+  const handleNext = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  };
+
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
+
+  const handleStepChange = (step) => {
+    setActiveStep(step);
   };
   return (
     <div>
@@ -120,36 +142,93 @@ export default function FindMy() {
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
         open={open}
+        className="p_card"
       >
         <BootstrapDialogTitle
           id="customized-dialog-title"
           onClose={handleClose}
+          className="p_card"
         >
-          Modal title
+          <div className="text-light">Screenshot</div>
         </BootstrapDialogTitle>
-        <DialogContent dividers>
-          <Typography gutterBottom>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros.
-          </Typography>
-          <Typography gutterBottom>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-            auctor.
-          </Typography>
-          <Typography gutterBottom>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
-            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
-            dui. Donec ullamcorper nulla non metus auctor fringilla.
-          </Typography>
+        <DialogContent dividers className="p_card">
+        <Box className="p_card">
+        <Paper
+        square
+        elevation={0}
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          bgcolor: "background.default",
+          borderRadius: 20,
+          }}
+        >
+          <Typography>{images[activeStep].label}</Typography>
+        </Paper>
+        <AutoPlaySwipeableViews
+        axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+        index={activeStep}
+        onChangeIndex={handleStepChange}
+        enableMouseEvents
+        >
+          {images.map((step, index) => (
+            <div key={step.label}>
+              {Math.abs(activeStep - index) <= 2 ? (
+                <Box
+                  component="img"
+                  sx={{
+                    height: 750,
+                    display: "block",
+                    overflow: "hidden",
+                    width: "100%",
+                    borderRadius: 5,
+                  }}
+                  src={step.imgPath}
+                  alt={step.label}
+                />
+              ) : null}
+            </div>
+          ))}
+        </AutoPlaySwipeableViews>
+        <MobileStepper
+          steps={maxSteps}
+          position="static"
+          activeStep={activeStep}
+          className="p_card"
+          nextButton={
+            <Button
+              size="small"
+              onClick={handleNext}
+              disabled={activeStep === maxSteps - 1}
+            >
+            </Button>
+          }
+          backButton={
+            <Button
+              size="small"
+              onClick={handleBack}
+              disabled={activeStep === 0}
+            ></Button>
+          }
+        />
+      </Box>
         </DialogContent>
-        <DialogActions>
-          <Button autoFocus onClick={handleClose}>
-            Save changes
-          </Button>
-        </DialogActions>
       </BootstrapDialog>
     </div>
   );
 }
+
+const images = [
+  {
+    imgPath: "https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/21.svg?alt=media&token=89f63eef-2000-4344-a830-6adf0adab52f",
+  },
+  {
+    imgPath: "https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/22.svg?alt=media&token=b8e046d6-2a34-40dd-9cee-3dc0d79f7ded",
+  },
+  {
+    imgPath: "https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/23.svg?alt=media&token=956999b3-8721-4e15-b1f1-f4b7cf17570d",
+  },
+  {
+    imgPath: "https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/24.svg?alt=media&token=80a13bfc-9f0c-47fb-8222-8dd4d37f9916",
+  },
+];

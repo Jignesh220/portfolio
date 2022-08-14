@@ -5,6 +5,8 @@ import Introduction from "../component/Introduction/Introduction";
 import Footer from "../component/resuseable/Footer";
 import About from "../component/About/About";
 import Projects from "../component/Projects/Projects";
+import Contact from "../component/Contact.js/Contact";
+import Mfooter from "../component/resuseable/Mfooter";
 
 import '../component/css/main.css'
 
@@ -15,6 +17,8 @@ const IndexPage = () => {
       <Introduction/>
       <About/>
       <Projects/>
+      <Contact/>
+      <Mfooter/>
       <Footer/>
     </div>
   );

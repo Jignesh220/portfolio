@@ -10,6 +10,7 @@ import Typography from "@mui/material/Typography";
 import Logo from "../../images/Jignesh_logo.png";
 import { Link } from "gatsby";
 import scrollTo from "gatsby-plugin-smoothscroll";
+import Resume from "../../images/resume.pdf"
 
 const drawerWidth = 240;
 
@@ -30,26 +31,27 @@ function Nav(props) {
       <Divider />
       <div class="mt-3 col-8 mx-auto">
         <Link
-          to=""
+          to="#about"
           className="col-12 bt btn border-0 px-4 shadow-lg t1 text-theme2 me-4 fs-6 text-decoration-none"
         >
           <b>About</b>
         </Link>
         <Link
-          to=""
-          className="col-12 mt-5 bt btn border-0 px-4 shadow-lg t1 text-theme2 me-4 ms-1 fs-6 text-decoration-none"
+        to="#project"
+          className="col-12 mt-5 bt btn py-2 border-0 px-4 shadow-lg t1 text-theme2 me-4 ms-1 fs-6 text-decoration-none"
         >
-          <b>Work</b>
+          <b>Project</b>
         </Link>
         <Link
-          to=""
-          className="col-12 mt-5  bt btn border-0 px-4 shadow-lg t1 text-theme2 me-4 ms-1 fs-6 text-decoration-none"
+          to="#contact"
+          className="col-12 mt-5 btn bt py-2 border-0 px-4 shadow-lg t1 text-theme2 me-4 ms-1 fs-6 text-decoration-none"
         >
           <b>Contact</b>
         </Link>
         <Link
-          to=""
-          className="col-12 mt-5 bt btn border-0 px-4 shadow-lg t1 text-theme2 me-2 ms-1 fs-6 text-decoration-none"
+          to="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/JigneshBaria_Resume.pdf?alt=media&token=0fdedd4b-0463-4bc4-954e-859194d2271f"
+          className="col-12 mt-5 bt btn py-2 border-0 px-4 shadow-lg t1 text-theme2 me-2 ms-1 fs-6 text-decoration-none"
+          target="_blank"
         >
           <b>Resume</b>
         </Link>
@@ -90,30 +92,30 @@ function Nav(props) {
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <div class="d-flex mt-3">
               <button
-                to=""
                 onClick={() => scrollTo('#about')}
-                className="bt btn border-0 px-4 shadow-lg t1 text-theme2 me-4 fs-6 text-decoration-none"
+                className="bt border-0 px-4 shadow-lg t1 text-theme2 me-4 fs-6 py-2"
               >
                 <b>About</b>
               </button>
               <button
-                to=""
-                className="bt btn border-0 px-4 shadow-lg t1 text-theme2 me-4 ms-1 fs-6 text-decoration-none"
+                onClick={() => scrollTo('#project')}
+                className="bt border-0 px-4 shadow-lg t1 text-theme2 me-4 ms-1 fs-6 py-2"
               >
                 <b>Project</b>
               </button>
               <button
-                to=""
-                className="bt btn border-0 px-4 shadow-lg t1 text-theme2 me-4 ms-1 fs-6 text-decoration-none"
+                onClick={() => scrollTo('#contact')}
+                className="bt border-0 px-4 shadow-lg t1 text-theme2 me-4 ms-1 fs-6 py-2"
               >
                 <b>Contact</b>
               </button>
-              <button
-                to=""
-                className="bt btn border-0 px-4 shadow-lg t1 text-theme2 me-2 ms-1 fs-6 text-decoration-none"
+              <Link
+                to="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/JigneshBaria_Resume.pdf?alt=media&token=0fdedd4b-0463-4bc4-954e-859194d2271f"
+                className="bt border-0 px-4 shadow-lg t1 text-theme2 me-2 ms-1 fs-6 py-2 text-decoration-none"
+                target="_blank"
               >
                 <b>Resume</b>
-              </button>
+              </Link>
             </div>
           </Box>
         </Toolbar>

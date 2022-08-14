@@ -53,11 +53,10 @@
   background-color: #97ffee;
 }
 .bt{
-  /* background-color: #06152c; */
   color: #06152c;
   font-family: 'Courier Prime', monospace;
-  background-color: #ffffff;
   border-radius: 20px;
+  background-color: #ffffff;
 }
 
 .bt:hover {

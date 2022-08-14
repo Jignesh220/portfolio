@@ -1,10 +1,10 @@
 import React from "react";
-import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import { Link } from "gatsby";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ScreenshotMonitorIcon from "@mui/icons-material/ScreenshotMonitor";
-import { Link } from "gatsby";
+import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 
 import PropTypes from "prop-types";
 import Button from "@mui/material/Button";
@@ -12,9 +12,17 @@ import { styled } from "@mui/material/styles";
 import Dialog from "@mui/material/Dialog";
 import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
-import DialogActions from "@mui/material/DialogActions";
 import CloseIcon from "@mui/icons-material/Close";
 import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+
+import MobileStepper from '@mui/material/MobileStepper';
+import Paper from '@mui/material/Paper';
+import SwipeableViews from 'react-swipeable-views';
+import { autoPlay } from 'react-swipeable-views-utils';
+import { useTheme } from '@mui/material/styles';
+
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
@@ -62,6 +70,21 @@ export default function Vendurmart() {
   };
   const handleClose = () => {
     setOpen(false);
+  };
+  const theme = useTheme();
+  const [activeStep, setActiveStep] = React.useState(0);
+  const maxSteps = images.length;
+
+  const handleNext = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep + 1);
+  };
+
+  const handleBack = () => {
+    setActiveStep((prevActiveStep) => prevActiveStep - 1);
+  };
+
+  const handleStepChange = (step) => {
+    setActiveStep(step);
   };
   return (
     <div>
@@ -138,36 +161,95 @@ export default function Vendurmart() {
         onClose={handleClose}
         aria-labelledby="customized-dialog-title"
         open={open}
+        className="p_card"
       >
         <BootstrapDialogTitle
           id="customized-dialog-title"
           onClose={handleClose}
+          className="p_card"
         >
-          Modal title
+        <div className="text-light">Screenshot</div>
         </BootstrapDialogTitle>
-        <DialogContent dividers>
-          <Typography gutterBottom>
-            Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-            dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-            ac consectetur ac, vestibulum at eros.
-          </Typography>
-          <Typography gutterBottom>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-            Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor
-            auctor.
-          </Typography>
-          <Typography gutterBottom>
-            Aenean lacinia bibendum nulla sed consectetur. Praesent commodo
-            cursus magna, vel scelerisque nisl consectetur et. Donec sed odio
-            dui. Donec ullamcorper nulla non metus auctor fringilla.
-          </Typography>
+        <DialogContent dividers className="p_card" width="100%">
+        <Box className="p_card">
+        <Paper
+        square
+        elevation={0}
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          bgcolor: "background.default",
+          borderRadius: 20,
+          }}
+        >
+          <Typography>{images[activeStep].label}</Typography>
+        </Paper>
+        <AutoPlaySwipeableViews
+        axis={theme.direction === "rtl" ? "x-reverse" : "x"}
+        index={activeStep}
+        onChangeIndex={handleStepChange}
+        enableMouseEvents
+        >
+          {images.map((step, index) => (
+            <div key={step.label}>
+              {Math.abs(activeStep - index) <= 2 ? (
+                <Box
+                  component="img"
+                  sx={{
+                    height: 750,
+                    display: "block",
+                    overflow: "hidden",
+                    width: "100%",
+                    borderRadius: 5,
+                  }}
+                  src={step.imgPath}
+                  alt={step.label}
+                />
+              ) : null}
+            </div>
+          ))}
+        </AutoPlaySwipeableViews>
+        <MobileStepper
+          steps={maxSteps}
+          position="static"
+          activeStep={activeStep}
+          className="p_card"
+          nextButton={
+            <Button
+              size="small"
+              onClick={handleNext}
+              disabled={activeStep === maxSteps - 1}
+            >
+            </Button>
+          }
+          backButton={
+            <Button
+              size="small"
+              onClick={handleBack}
+              disabled={activeStep === 0}
+            ></Button>
+          }
+        />
+      </Box>
         </DialogContent>
-        <DialogActions>
-          <Button autoFocus onClick={handleClose}>
-            Save changes
-          </Button>
-        </DialogActions>
       </BootstrapDialog>
     </div>
   );
 }
+const images = [
+  {
+    imgPath: "https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/screencapture-vendur-mart-web-app-2022-03-09-14_37_34.png?alt=media&token=3f723dfc-f976-458c-a8c5-adf469bb3b4d",
+  },
+  {
+    imgPath: "https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/screencapture-vendur-mart-web-app-home-2022-03-09-14_38_59.png?alt=media&token=a0939965-3522-4366-abe3-f88e29742b45",
+  },
+  {
+    imgPath: "https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/screencapture-vendur-mart-web-app-home-2022-03-09-14_43_59.png?alt=media&token=4821fdfd-3dbb-49a8-b896-ced2c4893217",
+  },
+  {
+    imgPath: "https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/screencapture-vendur-mart-web-app-grocery-2022-03-09-14_45_17.png?alt=media&token=fa056f96-e878-4265-bea0-04fb7b8ae7e3",
+  },
+  {
+    imgPath: "https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/Screenshot_20220814-231820_Chrome.png?alt=media&token=ed94f8ff-856c-490e-880d-7f7821ec0fa5",
+  },
+];
