@@ -65,11 +65,11 @@
   background-color: #97ffee;
 }
 .t1 {
-  transition: transform 0.2s;
+  transition: transform 0.5s;
 }
 
 .t1:hover {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .min-vh-80{
@@ -77,20 +77,34 @@
 }
 
 .round{
-  border-radius: 30px;
+  border-radius: 20px;
 }
 
 .title{
   font-family: 'Varela Round', sans-serif;
   font-weight: 600;
-  font-size: clamp(20px,4vw,40px);
+  font-size: clamp(30px,6vw,60px);
+  color: rgb(209, 255, 240);
+  letter-spacing: 1px;
+}
+.p_card{
+  background-color: #0a254d;
+}
+.card_title{
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 600;
+  font-size: clamp(15px,3vw,30px);
   color: rgb(209, 255, 240);
 }
-
 .a_text{
   line-height: 1.6;
 }
-
+.s_title{
+  /* font-family: 'Varela Round', sans-serif; */
+  font-family: 'Courier Prime', monospace;
+  font-size: clamp(7px,1.6vw,14px);
+  color: #92acb4;
+}
 /* Scrollbar */
 
 ::-webkit-scrollbar {
