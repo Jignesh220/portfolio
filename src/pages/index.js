@@ -4,6 +4,7 @@ import Nav from "../component/resuseable/Nav";
 import Introduction from "../component/Introduction/Introduction";
 import Footer from "../component/resuseable/Footer";
 import About from "../component/About/About";
+import Projects from "../component/Projects/Projects";
 
 import '../component/css/main.css'
 
@@ -13,6 +14,7 @@ const IndexPage = () => {
       <Nav/>
       <Introduction/>
       <About/>
+      <Projects/>
       <Footer/>
     </div>
   );

@@ -9,6 +9,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Logo from "../../images/Jignesh_logo.png";
 import { Link } from "gatsby";
+import scrollTo from "gatsby-plugin-smoothscroll";
 
 const drawerWidth = 240;
 
@@ -32,13 +33,13 @@ function Nav(props) {
           to=""
           className="col-12 bt btn border-0 px-4 shadow-lg t1 text-theme2 me-4 fs-6 text-decoration-none"
         >
-          <b>Work</b>
+          <b>About</b>
         </Link>
         <Link
           to=""
           className="col-12 mt-5 bt btn border-0 px-4 shadow-lg t1 text-theme2 me-4 ms-1 fs-6 text-decoration-none"
         >
-          <b>About</b>
+          <b>Work</b>
         </Link>
         <Link
           to=""
@@ -73,43 +74,46 @@ function Nav(props) {
           <IconButton
             aria-label="open drawer"
             sx={{ mr: 2, display: { sm: "none" }, marginLeft: "auto" }}
+            onClick={() => scrollTo('#header')}
           >
-            <img src={Logo} alt="logo" width="25px" className="t1 ms-2" />
+            <img src={Logo} alt="logo" width="25px" className="t1 ms-2"/>
           </IconButton>
           <Typography
             variant="h6"
             component="div"
             className="mt-3"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
+            onClick={() => scrollTo('#header')}
           >
             <img src={Logo} alt="logo" width="35px" className="t1 ms-2" />
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <div class="d-flex mt-3">
-              <Link
+              <button
                 to=""
+                onClick={() => scrollTo('#about')}
                 className="bt btn border-0 px-4 shadow-lg t1 text-theme2 me-4 fs-6 text-decoration-none"
               >
-                <b>Work</b>
-              </Link>
-              <Link
+                <b>About</b>
+              </button>
+              <button
                 to=""
                 className="bt btn border-0 px-4 shadow-lg t1 text-theme2 me-4 ms-1 fs-6 text-decoration-none"
               >
-                <b>About</b>
-              </Link>
-              <Link
+                <b>Project</b>
+              </button>
+              <button
                 to=""
                 className="bt btn border-0 px-4 shadow-lg t1 text-theme2 me-4 ms-1 fs-6 text-decoration-none"
               >
                 <b>Contact</b>
-              </Link>
-              <Link
+              </button>
+              <button
                 to=""
                 className="bt btn border-0 px-4 shadow-lg t1 text-theme2 me-2 ms-1 fs-6 text-decoration-none"
               >
                 <b>Resume</b>
-              </Link>
+              </button>
             </div>
           </Box>
         </Toolbar>

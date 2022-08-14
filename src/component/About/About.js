@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 
 export default function About() {
   return (
-    <div className="min-vh-100 bg-theme">
+    <div className="min-vh-100 bg-theme" id="about">
       <div className="container-fluid">
         <div className="card col-lg-7 col-md-10 col-sm-11 col-11 mx-auto bg-theme border-0 min-vh-100 mx-5 py-5">
           <div className="my-auto">
@@ -14,7 +14,7 @@ export default function About() {
                   src="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/j_photo.png?alt=media&token=be8ab714-e28f-4cbc-9d79-02049ed51e88"
                   alt="photo"
                   width="250px"
-                  className="mx-auto"
+                  className="mx-auto img-fluid"
                 />
               </div>
               <div className="col-12 col-md-10 col-lg-8 col-sm-12 card mx-auto bg-theme border-0">
