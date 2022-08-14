@@ -10,7 +10,6 @@ import Typography from "@mui/material/Typography";
 import Logo from "../../images/Jignesh_logo.png";
 import { Link } from "gatsby";
 import scrollTo from "gatsby-plugin-smoothscroll";
-import Resume from "../../images/resume.pdf"
 
 const drawerWidth = 240;
 
