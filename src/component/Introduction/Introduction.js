@@ -23,7 +23,11 @@ export default function Introduction() {
                   </div>
                   <div>As Assistant System Engineer</div>
                 </div>
-                <Link to="" className="col-1 mt-5 ms-2">
+                <Link
+                  to="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/JigneshBaria_Resume.pdf?alt=media&token=0fdedd4b-0463-4bc4-954e-859194d2271f"
+                  className="col-1 mt-5 ms-2"
+                  target="_blank"
+                >
                   <div className="btn t1 border-0 rbtn">Resume</div>
                 </Link>
               </div>
