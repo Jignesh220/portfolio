@@ -49,7 +49,7 @@ export default function About() {
                   <div className="mt-3 row ms-1">
                     Here are a few technologies I’ve been working with recently:
                     <div className="mt-2">
-                      <div className="col-12 col-lg-6 col-md-6 col-sm-12 mx-auto mono-text">
+                      <span className="col-12 col-lg-6 col-md-6 col-sm-12 mx-auto mono-text">
                         <ul>
                           <li>Javascript(ES 6+)</li>
                           <li>Nodejs</li>
@@ -57,15 +57,15 @@ export default function About() {
                           <li>Firebase</li>
                           <li>Rest API</li>
                         </ul>
-                      </div>
-                      <div className="col-12 col-lg-6 col-md-6 col-sm-12 mx-auto mono-text">
+                      </span>
+                      <span className="col-12 col-lg-6 col-md-6 col-sm-12 mx-auto mono-text">
                         <ul>
                           <li>Java</li>
                           <li>Android Studio</li>
                           <li>HTML</li>
                           <li>CSS/Bootstrap</li>
                         </ul>
-                      </div>
+                      </span>
                     </div>
                   </div>
                 </div>
