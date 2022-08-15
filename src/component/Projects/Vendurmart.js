@@ -5,24 +5,16 @@ import Tooltip from "@mui/material/Tooltip";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ScreenshotMonitorIcon from "@mui/icons-material/ScreenshotMonitor";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import { Carousel } from "react-bootstrap";
 
 import PropTypes from "prop-types";
-import Button from "@mui/material/Button";
 import { styled } from "@mui/material/styles";
 import Dialog from "@mui/material/Dialog";
 import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
 import CloseIcon from "@mui/icons-material/Close";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
 
-import MobileStepper from '@mui/material/MobileStepper';
-import Paper from '@mui/material/Paper';
-import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
-import { useTheme } from '@mui/material/styles';
 
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
@@ -71,21 +63,6 @@ export default function Vendurmart() {
   const handleClose = () => {
     setOpen(false);
   };
-  const theme = useTheme();
-  const [activeStep, setActiveStep] = React.useState(0);
-  const maxSteps = images.length;
-
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
-
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
-
-  const handleStepChange = (step) => {
-    setActiveStep(step);
-  };
   return (
     <div>
       <div className="text-light">
@@ -127,7 +104,10 @@ export default function Vendurmart() {
           <span className="me-1">
             <Tooltip title="website priview">
               <IconButton>
-                <ScreenshotMonitorIcon className="text-light t1" onClick={handleClickOpen}/>
+                <ScreenshotMonitorIcon
+                  className="text-light t1"
+                  onClick={handleClickOpen}
+                />
               </IconButton>
             </Tooltip>
           </span>
@@ -168,69 +148,53 @@ export default function Vendurmart() {
           onClose={handleClose}
           className="p_card"
         >
-        <div className="text-light">Screenshot</div>
+          <div className="text-light">Screenshot</div>
         </BootstrapDialogTitle>
         <DialogContent dividers className="p_card" width="100%">
-        <Box className="p_card">
-        <Paper
-        square
-        elevation={0}
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          bgcolor: "background.default",
-          borderRadius: 20,
-          }}
-        >
-          <Typography>{images[activeStep].label}</Typography>
-        </Paper>
-        <AutoPlaySwipeableViews
-        axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-        index={activeStep}
-        onChangeIndex={handleStepChange}
-        enableMouseEvents
-        >
-          {images.map((step, index) => (
-            <div key={step.label}>
-              {Math.abs(activeStep - index) <= 2 ? (
-                <Box
-                  component="img"
-                  sx={{
-                    height: 750,
-                    display: "block",
-                    overflow: "hidden",
-                    width: "100%",
-                    borderRadius: 5,
-                  }}
-                  src={step.imgPath}
-                  alt={step.label}
-                />
-              ) : null}
-            </div>
-          ))}
-        </AutoPlaySwipeableViews>
-        <MobileStepper
-          steps={maxSteps}
-          position="static"
-          activeStep={activeStep}
-          className="p_card"
-          nextButton={
-            <Button
-              size="small"
-              onClick={handleNext}
-              disabled={activeStep === maxSteps - 1}
-            >
-            </Button>
-          }
-          backButton={
-            <Button
-              size="small"
-              onClick={handleBack}
-              disabled={activeStep === 0}
-            ></Button>
-          }
-        />
-      </Box>
+          <Carousel fade>
+            <Carousel.Item interval={1000}>
+              <img
+                className="d-block"
+                src={
+                  "https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/screencapture-vendur-mart-web-app-2022-03-09-14_37_34.png?alt=media&token=3f723dfc-f976-458c-a8c5-adf469bb3b4d"
+                }
+                alt="First slide"
+                width="600px"
+              />
+            </Carousel.Item>
+            <Carousel.Item interval={1000}>
+              <img
+                className="d-block"
+                src="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/screencapture-vendur-mart-web-app-home-2022-03-09-14_38_59.png?alt=media&token=a0939965-3522-4366-abe3-f88e29742b45"
+                alt="Second slide"
+                width="600px"
+              />
+            </Carousel.Item>
+            <Carousel.Item interval={1000}>
+              <img
+                className="d-block"
+                src="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/screencapture-vendur-mart-web-app-home-2022-03-09-14_43_59.png?alt=media&token=4821fdfd-3dbb-49a8-b896-ced2c4893217"
+                alt="Third slide"
+                width="400px"
+              />
+            </Carousel.Item>
+            <Carousel.Item interval={1000}>
+              <img
+                className="d-block"
+                src="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/screencapture-vendur-mart-web-app-grocery-2022-03-09-14_45_17.png?alt=media&token=fa056f96-e878-4265-bea0-04fb7b8ae7e3"
+                alt="Third slide"
+                width="500px"
+              />
+            </Carousel.Item>
+            <Carousel.Item interval={1000}>
+              <img
+                className="d-block"
+                src="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/Screenshot_20220814-231820_Chrome.png?alt=media&token=ed94f8ff-856c-490e-880d-7f7821ec0fa5"
+                alt="Third slide"
+                width="350px"
+              />
+            </Carousel.Item>
+          </Carousel>
         </DialogContent>
       </BootstrapDialog>
     </div>
@@ -238,18 +202,23 @@ export default function Vendurmart() {
 }
 const images = [
   {
-    imgPath: "https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/screencapture-vendur-mart-web-app-2022-03-09-14_37_34.png?alt=media&token=3f723dfc-f976-458c-a8c5-adf469bb3b4d",
+    imgPath:
+      "https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/screencapture-vendur-mart-web-app-2022-03-09-14_37_34.png?alt=media&token=3f723dfc-f976-458c-a8c5-adf469bb3b4d",
   },
   {
-    imgPath: "https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/screencapture-vendur-mart-web-app-home-2022-03-09-14_38_59.png?alt=media&token=a0939965-3522-4366-abe3-f88e29742b45",
+    imgPath:
+      "https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/screencapture-vendur-mart-web-app-home-2022-03-09-14_38_59.png?alt=media&token=a0939965-3522-4366-abe3-f88e29742b45",
   },
   {
-    imgPath: "https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/screencapture-vendur-mart-web-app-home-2022-03-09-14_43_59.png?alt=media&token=4821fdfd-3dbb-49a8-b896-ced2c4893217",
+    imgPath:
+      "https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/screencapture-vendur-mart-web-app-home-2022-03-09-14_43_59.png?alt=media&token=4821fdfd-3dbb-49a8-b896-ced2c4893217",
   },
   {
-    imgPath: "https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/screencapture-vendur-mart-web-app-grocery-2022-03-09-14_45_17.png?alt=media&token=fa056f96-e878-4265-bea0-04fb7b8ae7e3",
+    imgPath:
+      "https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/screencapture-vendur-mart-web-app-grocery-2022-03-09-14_45_17.png?alt=media&token=fa056f96-e878-4265-bea0-04fb7b8ae7e3",
   },
   {
-    imgPath: "https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/Screenshot_20220814-231820_Chrome.png?alt=media&token=ed94f8ff-856c-490e-880d-7f7821ec0fa5",
+    imgPath:
+      "https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/Screenshot_20220814-231820_Chrome.png?alt=media&token=ed94f8ff-856c-490e-880d-7f7821ec0fa5",
   },
 ];

@@ -12,16 +12,8 @@ import Dialog from "@mui/material/Dialog";
 import DialogTitle from "@mui/material/DialogTitle";
 import DialogContent from "@mui/material/DialogContent";
 import CloseIcon from "@mui/icons-material/Close";
-import Typography from "@mui/material/Typography";
-import Box from "@mui/material/Box";
+import { Carousel } from "react-bootstrap";
 
-import MobileStepper from '@mui/material/MobileStepper';
-import Paper from '@mui/material/Paper';
-import SwipeableViews from 'react-swipeable-views';
-import { autoPlay } from 'react-swipeable-views-utils';
-import { useTheme } from '@mui/material/styles';
-
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   "& .MuiDialogContent-root": {
@@ -70,21 +62,7 @@ export default function FindMy() {
   const handleClose = () => {
     setOpen(false);
   };
-  const theme = useTheme();
-  const [activeStep, setActiveStep] = React.useState(0);
-  const maxSteps = images.length;
 
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-  };
-
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
-
-  const handleStepChange = (step) => {
-    setActiveStep(step);
-  };
   return (
     <div>
       <div className="text-light">
@@ -118,7 +96,10 @@ export default function FindMy() {
           <span className="me-1">
             <Tooltip title="Screenshot">
               <IconButton>
-                <ScreenshotMonitorIcon className="text-light t1" onClick={handleClickOpen}/>
+                <ScreenshotMonitorIcon
+                  className="text-light t1"
+                  onClick={handleClickOpen}
+                />
               </IconButton>
             </Tooltip>
           </span>
@@ -152,83 +133,45 @@ export default function FindMy() {
           <div className="text-light">Screenshot</div>
         </BootstrapDialogTitle>
         <DialogContent dividers className="p_card">
-        <Box className="p_card">
-        <Paper
-        square
-        elevation={0}
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          bgcolor: "background.default",
-          borderRadius: 20,
-          }}
-        >
-          <Typography>{images[activeStep].label}</Typography>
-        </Paper>
-        <AutoPlaySwipeableViews
-        axis={theme.direction === "rtl" ? "x-reverse" : "x"}
-        index={activeStep}
-        onChangeIndex={handleStepChange}
-        enableMouseEvents
-        >
-          {images.map((step, index) => (
-            <div key={step.label}>
-              {Math.abs(activeStep - index) <= 2 ? (
-                <Box
-                  component="img"
-                  sx={{
-                    height: 750,
-                    display: "block",
-                    overflow: "hidden",
-                    width: "100%",
-                    borderRadius: 5,
-                  }}
-                  src={step.imgPath}
-                  alt={step.label}
-                />
-              ) : null}
-            </div>
-          ))}
-        </AutoPlaySwipeableViews>
-        <MobileStepper
-          steps={maxSteps}
-          position="static"
-          activeStep={activeStep}
-          className="p_card"
-          nextButton={
-            <Button
-              size="small"
-              onClick={handleNext}
-              disabled={activeStep === maxSteps - 1}
-            >
-            </Button>
-          }
-          backButton={
-            <Button
-              size="small"
-              onClick={handleBack}
-              disabled={activeStep === 0}
-            ></Button>
-          }
-        />
-      </Box>
+          <Carousel fade>
+            <Carousel.Item interval={1000}>
+              <img
+                className="d-block"
+                src={
+                  "https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/21.svg?alt=media&token=89f63eef-2000-4344-a830-6adf0adab52f"
+                }
+                alt="First slide"
+                width="300px"
+              />
+            </Carousel.Item>
+            <Carousel.Item interval={1000}>
+              <img
+                className="d-block"
+                src="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/22.svg?alt=media&token=b8e046d6-2a34-40dd-9cee-3dc0d79f7ded"
+                alt="Second slide"
+                width="300px"
+              />
+            </Carousel.Item>
+            <Carousel.Item interval={1000}>
+              <img
+                className="d-block"
+                src="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/23.svg?alt=media&token=956999b3-8721-4e15-b1f1-f4b7cf17570d"
+                alt="Third slide"
+                width="300px"
+              />
+            </Carousel.Item>
+            <Carousel.Item interval={1000}>
+              <img
+                className="d-block"
+                src="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/24.svg?alt=media&token=80a13bfc-9f0c-47fb-8222-8dd4d37f9916"
+                alt="Third slide"
+                width="300px"
+              />
+            </Carousel.Item>
+          </Carousel>
         </DialogContent>
       </BootstrapDialog>
     </div>
   );
 }
 
-const images = [
-  {
-    imgPath: "https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/21.svg?alt=media&token=89f63eef-2000-4344-a830-6adf0adab52f",
-  },
-  {
-    imgPath: "https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/22.svg?alt=media&token=b8e046d6-2a34-40dd-9cee-3dc0d79f7ded",
-  },
-  {
-    imgPath: "https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/23.svg?alt=media&token=956999b3-8721-4e15-b1f1-f4b7cf17570d",
-  },
-  {
-    imgPath: "https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/24.svg?alt=media&token=80a13bfc-9f0c-47fb-8222-8dd4d37f9916",
-  },
-];

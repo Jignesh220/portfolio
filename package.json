@@ -18,16 +18,17 @@
     "@emotion/styled": "^11.10.0",
     "@mui/icons-material": "^5.8.4",
     "@mui/material": "^5.10.0",
+    "aos": "^2.3.4",
     "bootstrap-icons": "^1.9.1",
     "gatsby": "^4.20.0",
     "gatsby-plugin-image": "^2.20.0",
+    "gatsby-plugin-manifest": "^4.20.0",
     "gatsby-plugin-sharp": "^4.20.0",
     "gatsby-plugin-smoothscroll": "^1.2.0",
     "gatsby-source-filesystem": "^4.20.0",
     "gatsby-transformer-sharp": "^4.20.0",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-swipeable-views": "^0.14.0",
-    "react-swipeable-views-utils": "^0.14.0"
+    "react-bootstrap": "^2.5.0",
+    "react-dom": "^18.1.0"
   }
 }

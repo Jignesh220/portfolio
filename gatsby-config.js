@@ -1,9 +1,15 @@
 module.exports = {
   siteMetadata: {
     title: `portfolio`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://jignesh-baria.web.app/`
   },
-  plugins: ["gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+  plugins: ["gatsby-plugin-image", "gatsby-plugin-sharp", "gatsby-transformer-sharp",  {
+    resolve: 'gatsby-plugin-manifest',
+    options: {
+      "icon": "src/images/Jignesh_logo.png"
+    }
+  },
+  {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
