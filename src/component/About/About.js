@@ -7,7 +7,9 @@ export default function About() {
       <div className="container-fluid">
         <div className="card col-lg-7 col-md-10 col-sm-11 col-11 mx-auto bg-theme border-0 min-vh-100 mx-5 py-5">
           <div className="my-auto">
-            <div className="col-12 mx-auto title mb-5 text-center">About Me</div>
+            <div className="col-12 mx-auto title mb-5 text-center">
+              About Me
+            </div>
             <div className="row mt-3">
               <div className="col-12 col-lg-3 col-md-4 col-sm-12 mb-4 card bg-theme mx-auto border-0">
                 <img
@@ -46,22 +48,24 @@ export default function About() {
                   </div>
                   <div className="mt-3 row ms-1">
                     Here are a few technologies I’ve been working with recently:
-                    <div className="col-12 col-lg-6 col-md-6 col-sm-12 mx-auto mt-2 mono-text">
-                      <ul>
-                        <li>Javascript(ES 6+)</li>
-                        <li>Nodejs</li>
-                        <li>React(ES 6+)</li>
-                        <li>Firebase</li>
-                        <li>Rest API</li>
-                      </ul>
-                    </div>
-                    <div className="col-12 col-lg-6 col-md-6 col-sm-12 mx-auto mt-2 mono-text">
-                      <ul>
-                        <li>Java</li>
-                        <li>Android Studio</li>
-                        <li>HTML</li>
-                        <li>CSS/Bootstrap</li>
-                      </ul>
+                    <div className="mt-2">
+                      <div className="col-12 col-lg-6 col-md-6 col-sm-12 mx-auto mono-text">
+                        <ul>
+                          <li>Javascript(ES 6+)</li>
+                          <li>Nodejs</li>
+                          <li>React</li>
+                          <li>Firebase</li>
+                          <li>Rest API</li>
+                        </ul>
+                      </div>
+                      <div className="col-12 col-lg-6 col-md-6 col-sm-12 mx-auto mono-text">
+                        <ul>
+                          <li>Java</li>
+                          <li>Android Studio</li>
+                          <li>HTML</li>
+                          <li>CSS/Bootstrap</li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
