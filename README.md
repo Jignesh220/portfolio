@@ -4,15 +4,15 @@
   </a>
 </p>
 <h1 align="center">
-  https://jignesh-baria.web.app/ v1
+  Jignesh Baria Portfolio website version 1
 </h1>
 
-##
-
-<center>https://jignesh-baria.web.app/ built with 
+<p align="center">https://jignesh-baria.web.app/ built with 
 <a href="https://www.gatsbyjs.com/docs">
 Gatsby
 </a>
 and hosted with 
 <a href="https://firebase.google.com/">Firebase</a>
-</center>
+</p>
+
+<img alt="HomePage_Screenshot" src="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/website_Home.png?alt=media&token=7ba8027f-3132-411c-ad7f-643ef6af80e4" max-width="100%" />
