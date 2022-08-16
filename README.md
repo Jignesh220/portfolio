@@ -1,10 +1,10 @@
 <p align="center">
   <a href="https://jignesh-baria.web.app/">
-    <img alt="logo" src="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/Jignesh_logo.png?alt=media&token=45a2c91e-fd29-4033-86d9-6605c528d24f" width="60" />
+    <img alt="logo" src="https://github.com/Jignesh220/portfolio/blob/master/src/images/Jignesh_logo.png" width="60" />
   </a>
 </p>
 <h1 align="center">
-  Jignesh Baria Portfolio website version 1
+  Jignesh Baria Portfolio website v1
 </h1>
 
 <p align="center">https://jignesh-baria.web.app/ built with 
