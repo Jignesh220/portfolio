@@ -4,7 +4,7 @@
   </a>
 </p>
 <h1 align="center">
-  Jignesh Baria Portfolio website version 1
+  Jignesh Baria Portfolio website V1
 </h1>
 
 <p align="center">https://jignesh-baria.web.app/ built with 
