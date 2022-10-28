@@ -22,7 +22,7 @@ export default function Introduction() {
                   I'm a <span className="mono-text">Software Engineer</span> and
                   building Application and Wesite.
                   <div>
-                    Currently I am working in{" "}
+                    I was working in{" "}
                     <span className="mono-text">
                       Tata Consultancy Services.
                     </span>

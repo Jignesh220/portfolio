@@ -48,18 +48,24 @@ export default function About() {
                   </div>
                   <div className="mt-3 row ms-1">
                     Here are a few technologies I’ve been working with recently:
-                    <div className="mt-2">
-                      <div className="col-12 col-lg-5 col-md-5 col-sm-12 mono-text mt-4">
+                    <div className="mt-1">
+                      <div className="col-12 mono-text mt-2">
                         <ul>
-                          <li>Javascript(ES 6+)</li>
-                          <li>Nodejs</li>
-                          <li>React</li>
-                          <li>Firebase</li>
-                          <li>Rest API</li>
-                          <li>Java</li>
-                          <li>Android Studio</li>
-                          <li>HTML</li>
-                          <li>CSS/Bootstrap</li>
+                          <div className="row">
+                            <span className="col-0 col-sm-0 col-md-6 col-lg-6">
+                              <li>Javascript(ES6+)</li>
+                              <li>Nodejs</li>
+                              <li>React</li>
+                              <li>Firebase</li>
+                              <li>Rest API</li>
+                            </span>
+                            <span className="col-0 col-sm-0 col-md-6 col-lg-6">
+                              <li>Java</li>
+                              <li>Android Studio</li>
+                              <li>HTML</li>
+                              <li>CSS/Bootstrap</li>
+                            </span>
+                          </div>
                         </ul>
                       </div>
                     </div>
