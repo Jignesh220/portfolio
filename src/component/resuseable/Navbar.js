@@ -35,7 +35,7 @@ export default function Navbar() {
               <b>Contact</b>
             </Link>
             <Link
-              to=""
+              to="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/Resume_Jignesh_Baria.pdf?alt=media&token=482604e4-c92e-4c49-89ab-6e5ac8e247d9"
               className="bt btn border-0 px-4 shadow-lg t1 text-theme2 me-2 ms-1 fs-6 text-decoration-none"
             >
               <b>Resume</b>
