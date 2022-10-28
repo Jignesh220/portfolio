@@ -15,4 +15,4 @@ and hosted with
 <a href="https://firebase.google.com/">Firebase</a>
 </p>
 
-<img alt="HomePage_Screenshot" src="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/website_Home.png?alt=media&token=7ba8027f-3132-411c-ad7f-643ef6af80e4" max-width="100%" />
+<img alt="HomePage_Screenshot" src="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/website_Home.png?alt=media&token=566275df-3ba9-43f4-9c7f-014682ad207d" max-width="100%" />
