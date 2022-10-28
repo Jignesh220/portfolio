@@ -30,7 +30,7 @@ export default function Introduction() {
                   <div>As Assistant System Engineer</div>
                 </div>
                 <Link
-                  to="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/JigneshBaria_Resume.pdf?alt=media&token=0fdedd4b-0463-4bc4-954e-859194d2271f"
+                  to="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/Resume_Jignesh_Baria.pdf?alt=media&token=482604e4-c92e-4c49-89ab-6e5ac8e247d9"
                   className="col-1 mt-5 ms-2"
                   target="_blank"
                 >
