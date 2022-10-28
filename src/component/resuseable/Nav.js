@@ -92,28 +92,28 @@ function Nav(props) {
             <div class="d-flex mt-3">
               <button
                 onClick={() => scrollTo('#about')}
-                className="bt border-0 px-4 shadow-lg t1 text-theme2 me-4 fs-6 py-2"
+                className="border-0 px-4 shadow-lg bg-theme text-light me-4 fs-6 py-2 Nav-bar"
               >
-                <b>About</b>
+                1.About
               </button>
               <button
                 onClick={() => scrollTo('#project')}
-                className="bt border-0 px-4 shadow-lg t1 text-theme2 me-4 ms-1 fs-6 py-2"
+                className="border-0 px-4 shadow-lg bg-theme text-light me-4 ms-1 fs-6 py-2 Nav-bar"
               >
-                <b>Project</b>
+                2.Project
               </button>
               <button
                 onClick={() => scrollTo('#contact')}
-                className="bt border-0 px-4 shadow-lg t1 text-theme2 me-4 ms-1 fs-6 py-2"
+                className="border-0 px-4 shadow-lg bg-theme text-light me-4 ms-1 fs-6 py-2 Nav-bar"
               >
-                <b>Contact</b>
+                3.Contact
               </button>
               <Link
                 to="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/Resume_Jignesh_Baria.pdf?alt=media&token=2f1f8e39-4734-4bc1-84cb-4fe532f9fd51"
-                className="bt border-0 px-4 shadow-lg t1 text-theme2 me-2 ms-1 fs-6 py-2 text-decoration-none"
+                className="border-0 px-4 shadow-lg bg-theme text-light me-2 ms-1 fs-6 py-2 text-decoration-none Nav-bar"
                 target="_blank"
               >
-                <b>Resume</b>
+                4.Resume
               </Link>
             </div>
           </Box>

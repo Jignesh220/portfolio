@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css");
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap');
 
 .bg-theme {
   background-color: #06152c;
@@ -40,17 +41,17 @@
 }
 
 .rbtn{
-  font-family: 'Varela Round', sans-serif;
-  font-weight: 800;
-  letter-spacing: 1px;
-  font-size: clamp(10px,2vw,20px);
-  background-color: #cdf3ff;
-  border-radius: 10px;
+  transition: transform 1s;
 }
-
-.rbtn:hover {
-  color: #06152c;
-  background-color: #97ffee;
+.rbtn:hover{
+  transform: scale(1.09);
+  color: rgb(209, 255, 240);
+}
+.d-btn{
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 400;
+  font-size: clamp(15px,3vw,30px);
+  color: rgb(209, 255, 240);
 }
 .bt{
   color: #06152c;
@@ -64,11 +65,11 @@
   background-color: #97ffee;
 }
 .t1 {
-  transition: transform 0.5s;
+  transition: transform 1s;
 }
 
 .t1:hover {
-  transform: scale(1.02);
+  transform: scale(1.1);
 }
 
 .min-vh-80{
@@ -97,6 +98,16 @@
 }
 .a_text{
   line-height: 1.6;
+}
+.Nav-bar{
+  font-family: 'Chakra Petch', sans-serif;
+  letter-spacing: 2px;
+  transition: transform 1s;
+  border-radius: 20px;
+}
+.Nav-bar:hover{
+  transform: scale(1.09);
+  background-color: #00193f;
 }
 .s_title{
   /* font-family: 'Varela Round', sans-serif; */
