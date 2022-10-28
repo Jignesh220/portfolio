@@ -10,6 +10,8 @@ import Typography from "@mui/material/Typography";
 import Logo from "../../images/Jignesh_logo.png";
 import { Link } from "gatsby";
 import scrollTo from "gatsby-plugin-smoothscroll";
+import Tooltip from "@mui/material/Tooltip";
+import Button from "@mui/material/Button";
 
 const drawerWidth = 240;
 
@@ -36,7 +38,7 @@ function Nav(props) {
           <b>About</b>
         </Link>
         <Link
-        to="#project"
+          to="#project"
           className="col-12 mt-5 bt btn py-2 border-0 px-4 shadow-lg t1 text-theme2 me-4 ms-1 fs-6 text-decoration-none"
         >
           <b>Project</b>
@@ -75,45 +77,54 @@ function Nav(props) {
           <IconButton
             aria-label="open drawer"
             sx={{ mr: 2, display: { sm: "none" }, marginLeft: "auto" }}
-            onClick={() => scrollTo('#header')}
+            onClick={() => scrollTo("#header")}
           >
-            <img src={Logo} alt="logo" width="25px" className="t1 ms-2"/>
+            <img src={Logo} alt="logo" width="25px" className="t1 ms-2" />
           </IconButton>
           <Typography
             variant="h6"
             component="div"
             className="mt-3"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
-            onClick={() => scrollTo('#header')}
+            onClick={() => scrollTo("#header")}
           >
             <img src={Logo} alt="logo" width="35px" className="t1 ms-2" />
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <div class="d-flex mt-3">
               <button
-                onClick={() => scrollTo('#about')}
+                onClick={() => scrollTo("#about")}
                 className="border-0 px-4 shadow-lg bg-theme text-light me-4 fs-6 py-2 Nav-bar"
               >
-                1.About
+                <Tooltip title="About me">
+                  <div className="ms-0 text-light">1.About</div>
+                </Tooltip>
               </button>
               <button
-                onClick={() => scrollTo('#project')}
+                onClick={() => scrollTo("#project")}
                 className="border-0 px-4 shadow-lg bg-theme text-light me-4 ms-1 fs-6 py-2 Nav-bar"
               >
-                2.Project
+                <Tooltip title="Let's Goto Project">
+                  <div className="ms-0 text-light">2.Project</div>
+                </Tooltip>
               </button>
               <button
-                onClick={() => scrollTo('#contact')}
+                onClick={() => scrollTo("#contact")}
                 className="border-0 px-4 shadow-lg bg-theme text-light me-4 ms-1 fs-6 py-2 Nav-bar"
               >
-                3.Contact
+                <Tooltip title="Contact me">
+                  <div className="ms-0 text-light">3.Contact</div>
+                </Tooltip>
               </button>
+
               <Link
                 to="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/Resume_Jignesh_Baria.pdf?alt=media&token=2f1f8e39-4734-4bc1-84cb-4fe532f9fd51"
                 className="border-0 px-4 shadow-lg bg-theme text-light me-2 ms-1 fs-6 py-2 text-decoration-none Nav-bar"
                 target="_blank"
               >
-                4.Resume
+                <Tooltip title="Download Resume">
+                  <div className="ms-0 text-light">4.Resume</div>
+                </Tooltip>
               </Link>
             </div>
           </Box>

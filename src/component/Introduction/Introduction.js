@@ -41,11 +41,6 @@ export default function Introduction() {
                   target="_blank"
                 >
                   <div className="bg-theme border-0 rbtn px-3">
-                    <Tooltip title="Download Resume">
-                      <IconButton>
-                        <span className="text-light d-btn border-0">Resume </span><OpenInNewIcon className="text-light" />
-                      </IconButton>
-                    </Tooltip>
                   </div>
                 </Link>
               </div>
