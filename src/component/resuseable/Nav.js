@@ -50,7 +50,7 @@ function Nav(props) {
           <b>Contact</b>
         </Link>
         <Link
-          to="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/Resume_Jignesh_Baria.pdf?alt=media&token=2f1f8e39-4734-4bc1-84cb-4fe532f9fd51"
+          to="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/Resume_Jignesh_Baria.pdf?alt=media&token=b4bef8d4-0c7f-42ad-b61a-aad7d481b275"
           className="col-12 mt-5 bt btn py-2 border-0 px-4 shadow-lg t1 text-theme2 me-2 ms-1 fs-6 text-decoration-none"
           target="_blank"
         >
@@ -97,7 +97,7 @@ function Nav(props) {
                 className="border-0 px-4 shadow-lg bg-theme text-light me-4 fs-6 py-2 Nav-bar"
               >
                 <Tooltip title="About me">
-                  <div className="ms-0 text-light">1.About</div>
+                  <div className="ms-0 text-light">About</div>
                 </Tooltip>
               </button>
               <button
@@ -118,7 +118,7 @@ function Nav(props) {
               </button>
 
               <Link
-                to="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/Resume_Jignesh_Baria.pdf?alt=media&token=2f1f8e39-4734-4bc1-84cb-4fe532f9fd51"
+                to="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/Resume_Jignesh_Baria.pdf?alt=media&token=b4bef8d4-0c7f-42ad-b61a-aad7d481b275"
                 className="border-0 px-4 shadow-lg bg-theme text-light me-2 ms-1 fs-6 py-2 text-decoration-none Nav-bar"
                 target="_blank"
               >
