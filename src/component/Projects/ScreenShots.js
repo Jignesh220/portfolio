@@ -95,7 +95,7 @@ export default function ScreenShots({
                   className="d-block"
                   src={image1}
                   alt="1"
-                  width="70%"
+                  width="300px"
                   style={{
                     borderRadius: 25,
                   }}
@@ -106,7 +106,7 @@ export default function ScreenShots({
                   className="d-block"
                   src={image2}
                   alt="2"
-                  width="70%"
+                  width="300px"
                   style={{
                     borderRadius: 25,
                   }}
@@ -117,7 +117,7 @@ export default function ScreenShots({
                   className="d-block"
                   src={image3}
                   alt="3"
-                  width="70%"
+                  width="300px"
                   style={{
                     borderRadius: 25,
                   }}
@@ -128,7 +128,7 @@ export default function ScreenShots({
                   className="d-block"
                   src={image4}
                   alt="4"
-                  width="70%"
+                  width="300px"
                   style={{
                     borderRadius: 25,
                   }}
@@ -140,7 +140,7 @@ export default function ScreenShots({
                     className="d-block"
                     src={image5}
                     alt="6"
-                    width="70%"
+                    width="300px"
                     style={{
                       borderRadius: 25,
                     }}
@@ -153,7 +153,7 @@ export default function ScreenShots({
                     className="d-block"
                     src={image6}
                     alt="6"
-                    width="70%"
+                    width="300px"
                     style={{
                       borderRadius: 25,
                     }}
