@@ -1,7 +1,8 @@
-import React from "react";
+import React,{useEffect} from "react";
 import Vendurmart from "./Vendurmart";
 import Chatapp from "./Chatapp";
 import FindMy from "./FindMy";
+
 
 export default function Projects() {
   return (
@@ -14,17 +15,23 @@ export default function Projects() {
             </div>
             <div className="row mt-3">
               <div className="card border-0 bg-theme col-12 mx-auto">
-                <div className="row">
-                  <div className="col-lg-8 col-md-8 col-sm-11 col-11 mx-auto p-4 p_card round shadow-lg">
-                    <Vendurmart/>
+                <div className="row gy-3 gx-3">
+                  <div className="col-lg-8 col-md-8 col-sm-11 col-11 mx-auto">
+                    <div className="p-4 p_card round shadow-lg">
+                      <Vendurmart />
+                    </div>
                   </div>
 
-                  <div className="col-lg-5 col-md-5 col-sm-11 col-11 mx-auto p-4 p_card round shadow-lg mt-5 mb-5">
-                    <Chatapp/>
+                  <div className="col-lg-6 col-md-6 col-sm-11 col-11 mx-auto">
+                    <div className="p-4 p_card round shadow-lg">
+                      <Chatapp />
+                    </div>
                   </div>
 
-                  <div className="col-lg-5 col-md-5 col-sm-11 col-11 mx-auto p-4 p_card round shadow-lg mt-5 mb-5">
-                    <FindMy/>
+                  <div className="col-lg-6 col-md-6 col-sm-11 col-11 mx-auto">
+                    <div className="p-4 p_card round shadow-lg">
+                      <FindMy />
+                    </div>
                   </div>
                 </div>
               </div>
