@@ -12,6 +12,7 @@ import { Link } from "gatsby";
 import scrollTo from "gatsby-plugin-smoothscroll";
 import Tooltip from "@mui/material/Tooltip";
 import Button from "@mui/material/Button";
+import AOS from "aos";
 
 const drawerWidth = 240;
 
@@ -22,6 +23,19 @@ function Nav(props) {
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
+
+  React.useEffect(() => {
+    AOS.init({
+      // Global settings:
+      startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+      initClassName: "aos-init", // class applied after initialization
+      animatedClassName: "aos-animate", // class applied on animation
+      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+      debounceDelay: 100, // the delay on debounce used while resizing window (advanced)
+      throttleDelay: 199, // the delay on throttle used while scrolling the page (advanced)
+      easing: "ease", // default easing for AOS animations
+    });
+  }, []);
 
   const drawer = (
     <Box
@@ -34,18 +48,30 @@ function Nav(props) {
         <Link
           to="#about"
           className="col-12 bt btn border-0 px-4 shadow-lg t1 text-theme2 me-4 fs-6 text-decoration-none"
+          data-aos="zoom-out-up"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-delay="50"
+          data-aos-duration="1000"
         >
           <b>About</b>
         </Link>
         <Link
           to="#project"
           className="col-12 mt-5 bt btn py-2 border-0 px-4 shadow-lg t1 text-theme2 me-4 ms-1 fs-6 text-decoration-none"
+          data-aos="zoom-out-up"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-delay="250"
+          data-aos-duration="1000"
         >
           <b>Project</b>
         </Link>
         <Link
           to="#contact"
           className="col-12 mt-5 btn bt py-2 border-0 px-4 shadow-lg t1 text-theme2 me-4 ms-1 fs-6 text-decoration-none"
+          data-aos="zoom-out-up"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-delay="450"
+          data-aos-duration="1000"
         >
           <b>Contact</b>
         </Link>
@@ -53,6 +79,10 @@ function Nav(props) {
           to="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/Resume_Jignesh_Baria.pdf?alt=media&token=b4bef8d4-0c7f-42ad-b61a-aad7d481b275"
           className="col-12 mt-5 bt btn py-2 border-0 px-4 shadow-lg t1 text-theme2 me-2 ms-1 fs-6 text-decoration-none"
           target="_blank"
+          data-aos="zoom-out-up"
+          data-aos-anchor-placement="top-bottom"
+          data-aos-delay="650"
+          data-aos-duration="1000"
         >
           <b>Resume</b>
         </Link>
@@ -71,6 +101,9 @@ function Nav(props) {
             aria-label="open drawer"
             onClick={handleDrawerToggle}
             sx={{ mr: 2, display: { sm: "none" } }}
+            data-aos="zoom-out-up"
+            data-aos-delay="100"
+            data-aos-duration="500"
           >
             <MenuIcon color="primary" />
           </IconButton>
@@ -78,6 +111,9 @@ function Nav(props) {
             aria-label="open drawer"
             sx={{ mr: 2, display: { sm: "none" }, marginLeft: "auto" }}
             onClick={() => scrollTo("#header")}
+            data-aos="zoom-out-up"
+            data-aos-delay="100"
+            data-aos-duration="500"
           >
             <img src={Logo} alt="logo" width="25px" className="t1 ms-2" />
           </IconButton>
@@ -87,6 +123,9 @@ function Nav(props) {
             className="mt-3"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
             onClick={() => scrollTo("#header")}
+            data-aos="fade-right"
+            data-aos-delay="50"
+            data-aos-duration="500"
           >
             <img src={Logo} alt="logo" width="35px" className="t1 ms-2" />
           </Typography>
@@ -95,14 +134,20 @@ function Nav(props) {
               <button
                 onClick={() => scrollTo("#about")}
                 className="border-0 px-4 shadow-lg bg-theme text-light me-4 fs-6 py-2 Nav-bar"
+                data-aos="fade-down"
+                data-aos-delay="50"
+                data-aos-duration="700"
               >
                 <Tooltip title="About me">
-                  <div className="ms-0 text-light">About</div>
+                  <div className="ms-0 text-light">1.About</div>
                 </Tooltip>
               </button>
               <button
                 onClick={() => scrollTo("#project")}
                 className="border-0 px-4 shadow-lg bg-theme text-light me-4 ms-1 fs-6 py-2 Nav-bar"
+                data-aos="fade-down"
+                data-aos-delay="250"
+                data-aos-duration="700"
               >
                 <Tooltip title="Let's Goto Project">
                   <div className="ms-0 text-light">2.Project</div>
@@ -111,6 +156,9 @@ function Nav(props) {
               <button
                 onClick={() => scrollTo("#contact")}
                 className="border-0 px-4 shadow-lg bg-theme text-light me-4 ms-1 fs-6 py-2 Nav-bar"
+                data-aos="fade-down"
+                data-aos-delay="450"
+                data-aos-duration="700"
               >
                 <Tooltip title="Contact me">
                   <div className="ms-0 text-light">3.Contact</div>
@@ -121,6 +169,9 @@ function Nav(props) {
                 to="https://firebasestorage.googleapis.com/v0/b/jignesh-baria.appspot.com/o/Resume_Jignesh_Baria.pdf?alt=media&token=b4bef8d4-0c7f-42ad-b61a-aad7d481b275"
                 className="border-0 px-4 shadow-lg bg-theme text-light me-2 ms-1 fs-6 py-2 text-decoration-none Nav-bar"
                 target="_blank"
+                data-aos="fade-down"
+                data-aos-delay="650"
+                data-aos-duration="700"
               >
                 <Tooltip title="Download Resume">
                   <div className="ms-0 text-light">4.Resume</div>

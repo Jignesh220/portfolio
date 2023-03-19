@@ -1,15 +1,20 @@
 import React from "react";
 import { useEffect } from "react";
 import { Link } from "gatsby";
-import Aos from "aos";
-import Tooltip from "@mui/material/Tooltip";
-import IconButton from "@mui/material/IconButton";
-import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import "aos/dist/aos.css";
+import AOS from "aos";
 
 export default function Introduction() {
   useEffect(() => {
-    Aos.init({ duration: 2000 });
+    AOS.init({
+      // Global settings:
+      startEvent: "DOMContentLoaded", // name of the event dispatched on the document, that AOS should initialize on
+      initClassName: "aos-init", // class applied after initialization
+      animatedClassName: "aos-animate", // class applied on animation
+      disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+      debounceDelay: 100, // the delay on debounce used while resizing window (advanced)
+      throttleDelay: 199, // the delay on throttle used while scrolling the page (advanced)
+      easing: "ease", // default easing for AOS animations
+    });
   }, []);
   return (
     <div className="min-vh-100 bg-theme" id="header">
@@ -17,14 +22,37 @@ export default function Introduction() {
         <div className="card bg-theme border-0 min-vh-100 mx-5">
           <div className="my-auto">
             <div className="row">
-              <div
-                className="col-11 col-md-8 col-lg-6 col-sm-11 card mx-auto bg-theme border-0"
-                data-aos="fade-up"
-              >
-                <div className="mono-text ms-2 fs-5">Hi,My name is</div>
-                <div className="intro">Jignesh Baria</div>
-                <div className="role pt-1">App and web Developer</div>
-                <div className="fs-6 text-light small-intro mt-3">
+              <div className="col-11 col-md-8 col-lg-6 col-sm-11 card mx-auto bg-theme border-0">
+                <div
+                  className="mono-text ms-2 fs-5"
+                  data-aos="fade-up"
+                  data-aos-delay="1000"
+                  data-aos-duration="1000"
+                >
+                  Hi,My name is
+                </div>
+                <div
+                  className="intro"
+                  data-aos="fade-up"
+                  data-aos-delay="1200"
+                  data-aos-duration="1000"
+                >
+                  Jignesh Baria
+                </div>
+                <div
+                  className="role pt-1"
+                  data-aos="fade-up"
+                  data-aos-delay="1400"
+                  data-aos-duration="1000"
+                >
+                  Web Developer
+                </div>
+                <div
+                  className="fs-6 text-light small-intro mt-3"
+                  data-aos="fade-up"
+                  data-aos-delay="1600"
+                  data-aos-duration="1000"
+                >
                   I'm a <span className="mono-text">Software Engineer</span> and
                   building Application and Wesite.
                   <div>
@@ -40,8 +68,7 @@ export default function Introduction() {
                   className="col-6 mt-5 text-decoration-none"
                   target="_blank"
                 >
-                  <div className="bg-theme border-0 rbtn px-3">
-                  </div>
+                  <div className="bg-theme border-0 rbtn px-3"></div>
                 </Link>
               </div>
             </div>
