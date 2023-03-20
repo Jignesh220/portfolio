@@ -45,7 +45,7 @@ export default function Introduction() {
                   data-aos-delay="1400"
                   data-aos-duration="1000"
                 >
-                  Web Developer
+                  Application & Web Developer
                 </div>
                 <div
                   className="fs-6 text-light small-intro mt-3"

@@ -13,7 +13,7 @@ export default function FoodFast() {
     <div>
       <div>
         <div className="text-light">
-          <div className="card_title pt-2 col-12 text-center">VendurMart</div>
+          <div className="card_title pt-2 col-12 text-center">FoodFast</div>
           <div
             className="text-light mono-text mt-3"
             style={{
